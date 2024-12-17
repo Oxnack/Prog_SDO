@@ -1,0 +1,8 @@
+def base_converter(num:int, base:int) -> str:
+    weight_bases = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    converted = []
+    curr = num
+    while curr != 0:
+        converted.insert(0, weight_bases[(curr%base)])
+        curr = curr // base
+    return converted
