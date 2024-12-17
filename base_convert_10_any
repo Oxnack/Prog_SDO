@@ -1,3 +1,4 @@
+# перевод из 10чной в любую
 def base_converter(num:int, base:int) -> str:
     weight_bases = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     converted = []
@@ -6,3 +7,15 @@ def base_converter(num:int, base:int) -> str:
         converted.insert(0, weight_bases[(curr%base)])
         curr = curr // base
     return converted
+
+# поиск делителей
+def dividers_find(n:int) -> list:
+    dividers = []
+    if n == 0:
+        return ["B", "E", " ", "R", "E", "A", "L", ":)"]
+    for i in range(1, int(n**0.5 + 1)):
+        if n % i == 0:
+            dividers.append(i)
+            dividers.append(n // i)
+    return dividers
+
